@@ -1,0 +1,65 @@
+\documentclass[10pt,oneside]{article}
+
+%%%%%%%%%%%%%
+\setlength{\textheight}{8.75in} %Letter is 11in, less 2 for margins, less 0.25 for footer
+\setlength{\oddsidemargin}{0.0in} %gets +1inc
+\setlength{\evensidemargin}{0.0in} %gets +1inch
+\setlength{\textwidth}{6.50in} %Letter is 8.5, less 2 inches for margins
+\setlength{\topmargin}{0.0in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parindent}{0.25in}
+%%%%%%%%%%%% 
+
+\usepackage[numbers]{natbib}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,citecolor=black,urlcolor=blue]{hyperref}
+
+\title{BioJava Project Update 2016}
+\author{\small \underline{Michael~Heuer}$^{1}$, Additional Author$^{2}$,
+\and \small Additional Author$^{2}$, Additional Author${^2}$}
+\date{}
+
+\begin{document}
+
+\footnotetext[1]{AMPLab, University of California, Berkeley, CA}
+\footnotetext[2]{Additional Affiliation, Springfield, USA}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\footnotetext{Correspondence should be addressed to heuermh@berkeley.edu.}
+
+\maketitle
+
+\vspace{-0.25in}
+\noindent
+{\small
+Website: \url{http://biojava.org} \\
+Repositories: \url{https://github.com/biojava/biojava} and \url{https://github.com/biojava/biojava-legacy}\\
+License: GNU Lesser General Public License (LGPL)\\
+}
+
+BioJava~\cite{prlic2012biojava} is a mature open-source project that provides a framework for processing of
+biological data. BioJava contains powerful analysis and statistical routines, tools for parsing common file
+formats, and packages for manipulating sequences and 3D structures. It enables rapid bioinformatics application
+development in the Java programming language. The BioJava project is supported by the Open Bioinformatics
+Foundation (OBF).
+
+
+BioJava version 4.2.0 was released in March 2016, with over 750 commits from 10 contributors since the
+previous release.  Several new features were added, such as a full DSSP--compatible implementation of secondary
+structure assignment, improvements in symmetry detection, a unified StructureIdentifier framework, and a
+new SearchIO framework to interface {BLAST} (or {BLAST}--like) searches.  Macromolecular Crystallographic
+Information File ({mmCIF}) support was improved, including parsing of bonds, sites, and charges for
+chemical components.
+
+
+Since version 4.2.0, work is progressing towards a new major release version 5.0.0.  The minimum JDK has been
+bumped to JDK8 to allow access to new language syntax and features.  Compound has been refactored to entity
+and now considers non-polymer compounds.  Support for a new Macromolecular Transmission Format ({MMTF}), a compact
+binary format to represent biomolecular structures from Protein Data Bank ({PDB}), is under active development.
+
+\bibliographystyle{abbrv}
+\bibliography{abstract}
+
+\end{document}
